@@ -114,7 +114,9 @@ const searchFilters = evt => {
 
 // Set up select element using Choices library
 const typeElem = document.querySelector('#type')
-const type = new Choices(typeElem)
+const type = new Choices(typeElem, {
+  itemSelectText: '',
+})
 typeElem.addEventListener('change', searchFilters)
 
 // Handle ?q query param and set default search with it,
